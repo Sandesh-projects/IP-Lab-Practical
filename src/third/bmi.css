@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+.bmi-container button:hover {
+    background-color: #0056b3;
+}
+
 .bmi-container .bmi-result {
     margin-top: 20px;
     text-align: center;

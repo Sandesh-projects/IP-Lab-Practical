@@ -11,10 +11,13 @@ const BmiCalculator = () => {
     const calculateBmi = async (e) => {
         e.preventDefault();
 
+        // Ensure height is in meters
+        const heightInMeters = height / 100;
+
         const response = await fetch('http://localhost:5001/api/bmi', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ weight, height }),
+            body: JSON.stringify({ weight, height: heightInMeters }), // Pass height in meters
         });
 
         const data = await response.json();
@@ -36,7 +39,7 @@ const BmiCalculator = () => {
                     />
                 </div>
                 <div>
-                    <label>Height (m): </label>
+                    <label>Height (cm): </label>
                     <input
                         type="number"
                         value={height}

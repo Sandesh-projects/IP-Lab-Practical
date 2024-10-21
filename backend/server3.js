@@ -18,7 +18,7 @@ app.post('/api/bmi', (req, res) => {
     }
 
     // Calculate BMI
-    const bmi = weight / (height * height);
+    const bmi = weight / (height * height); // height should be in meters
     let category = '';
 
     // Determine health category based on BMI value
