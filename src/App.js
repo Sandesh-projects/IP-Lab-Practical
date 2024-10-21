@@ -15,18 +15,22 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/bmi" element={<BMI />} />
-          <Route path="/movie" element={<MOVIE />} />
-          <Route path="/phone" element={<PHONE />} />
-          <Route path="/salary" element={<SALARY />} />
-          <Route path="/course" element={<COURSE />} />
-          <Route path="/recipe" element={<RECIPE />} />
-          <Route path="/bill" element={<BILL />} />
-          <Route path="/interest" element={<INTEREST />} />
-        </Routes>
+      <Routes>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/bmi" element={<BMI />} />
+        <Route path="/movie" element={<MOVIE />} />
+        <Route path="/phone" element={<PHONE />} />
+        <Route path="/salary" element={<SALARY />} />
+        <Route path="/course" element={<COURSE />} />
+        
+        {/* Update recipe routes */}
+        <Route path="/recipe" element={<RECIPE />} />
+        <Route path="/recipes/:id" element={<RECIPE />} /> {/* For individual recipe */}
+
+        <Route path="/bill" element={<BILL />} />
+        <Route path="/interest" element={<INTEREST />} />
+      </Routes>
     </Router>
   );
 }

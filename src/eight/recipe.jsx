@@ -67,7 +67,7 @@ const RecipeCatalog = () => {
                         </ul>
                         <h3>Instructions:</h3>
                         <p>{selectedRecipe.instructions}</p>
-                        <Link to="/">
+                        <Link to="/recipe">
                             <button>Back to Recipes</button>
                         </Link>
                     </div>
